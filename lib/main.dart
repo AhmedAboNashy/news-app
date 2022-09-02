@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/home_screen.dart';
-
+import 'package:news_app/home/home_screen.dart';
 
 void main() {
   runApp( MyApp());
@@ -15,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       routes: {HomeScreen.roueName :(_)=>HomeScreen()},
       initialRoute: HomeScreen.roueName,
-      debugShowCheckedModeBanner: true,
+      debugShowCheckedModeBanner: false,
 
     );
   }
