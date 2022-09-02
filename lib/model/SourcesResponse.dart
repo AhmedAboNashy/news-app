@@ -6,17 +6,12 @@ class SourcesResponse {
   List<Source>? sources;
   String? code;
   String? message;
-  SourcesResponse({
-    this.status,
-    this.sources,
-    this.code,
-    this.message
-  });
+  SourcesResponse({this.status, this.sources, this.code, this.message});
 
   SourcesResponse.fromJson(dynamic json) {
     status = json['status'];
-    code=json['code'];
-    message=json['message'];
+    code = json['code'];
+    message = json['message'];
     if (json['sources'] != null) {
       sources = [];
       json['sources'].forEach((v) {
@@ -24,7 +19,6 @@ class SourcesResponse {
       });
     }
   }
-
 
   SourcesResponse copyWith({
     String? status,
