@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/home/home_screen.dart';
 
+import 'home/news/news_fragment.dart';
+
 void main() {
-  runApp( MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -12,11 +14,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      routes: {HomeScreen.roueName :(_)=>HomeScreen()},
-      initialRoute: HomeScreen.roueName,
+      theme: ThemeData(primarySwatch: Colors.green),
+      routes: {HomeScreen.routeName: (_) => NewsFragment(),},color: Colors.green,
+      initialRoute: HomeScreen.routeName,
       debugShowCheckedModeBanner: false,
-
     );
   }
 }
-
